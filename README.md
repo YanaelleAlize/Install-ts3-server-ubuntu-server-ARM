@@ -1,2 +1,11 @@
 # Install-ts3-server-ubuntu-server-ARM
 Install a teamsspeak3 server on ubuntu for ARM architecture with a bash script.
+Created from the procedure described here :
+https://www.raspberrypi.org/forums/viewtopic.php?t=275114
+
+Before running this script, make sure you don't already have a custom schroot called streched64.
+(The best usage for that installation script is to read it to be sure it doesn't badly interact with your system)
+
+To use this procedure, make sure your system is up to date, clone this repository and execute run-install-as-root.sh
+
+Tested on Ubuntu server 20.04 and 20.10 and Rasperry Pi 4 model B (4 Go RAM)

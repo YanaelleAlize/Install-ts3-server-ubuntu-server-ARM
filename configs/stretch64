@@ -1,0 +1,6 @@
+[stretch64]
+description=Debian Stretch (64 bit)
+directory=/srv/chroot/stretch64
+root-users=teamspeak
+users=teamspeak
+type=directory

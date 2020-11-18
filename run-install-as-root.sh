@@ -37,22 +37,26 @@ cd tmp
 wget https://files.teamspeak-services.com/releases/server/3.13.1/teamspeak3-server_linux_amd64-3.13.1.tar.bz2
 tar -xjf teamspeak3-server_linux_amd64-3.13.1.tar.bz2
 cd teamspeak3-server_linux_amd64
-touch .ts3server_license_accepted
 mv * /srv/chroot/stretch64/opt/teamspeak
+touch /srv/chroot/stretch64/opt/teamspeak/.ts3server_license_accepted
 chown -Rf teamspeak /srv/chroot/stretch64/opt/teamspeak
 cd ../..
 rm -rf tmp
 
-cp
- configs/teamspeak3server.service /lib/systemd/system/
-systemctl enable teamspeak3server.service
+#cp configs/teamspeak3server.service /lib/systemd/system/
+#systemctl enable teamspeak3server.service
+
+#create teamspeak crontab to launch the server on startup
+cp configs/teamspeak_crontab /var/spool/cron/crontabs/teamspeak
 
 echo END Dowloading and setting up ts3 server
 
 echo START Testing server
 echo You should save the info of the TS3 server
 sleep 5
-su - teamspeak -c "/opt/teamspeak/ts3.sh start"
+cd /
+su - teamspeak -c "schroot -c stretch64 -u root -- sh -c '/opt/teamspeak/ts3server_startscript.sh start'"
+#su - teamspeak -c "/opt/teamspeak/ts3.sh start"
 sleep 5
 exit
 echo Now you can reboot your system and enjoy your newly installed ts3 server.

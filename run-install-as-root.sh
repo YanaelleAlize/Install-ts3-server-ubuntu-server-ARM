@@ -55,7 +55,7 @@ echo START Testing server
 echo You should save the info of the TS3 server
 sleep 5
 cd /
-su - teamspeak -c "schroot -c stretch64 -u root -- sh -c './ts3server_minimal_runscript.sh'"
+su - teamspeak -c "schroot -c stretch64 -u root -- sh -c '/opt/teamspeak/ts3server_minimal_runscript.sh'"
 # New version to see the informations
 #su - teamspeak -c "schroot -c stretch64 -u root -- sh -c '/opt/teamspeak/ts3server_startscript.sh start'"
 #su - teamspeak -c "/opt/teamspeak/ts3.sh start"

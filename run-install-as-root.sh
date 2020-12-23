@@ -48,6 +48,7 @@ rm -rf tmp
 
 #create teamspeak crontab to launch the server on startup
 cp configs/teamspeak_crontab /var/spool/cron/crontabs/teamspeak
+chown teamspeak:crontab /var/spool/cron/crontabs/teamspeak
 
 echo END Dowloading and setting up ts3 server
 

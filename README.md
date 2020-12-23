@@ -3,7 +3,7 @@ Install a teamsspeak3 server on ubuntu for ARM architecture with a bash script.
 Created from the procedure described here :
 https://www.raspberrypi.org/forums/viewtopic.php?t=275114
 
-Before running this script, make sure you don't already have a custom schroot called streched64.
+Before running this script, make sure you don't already have a custom schroot called strech64.
 (The best usage for that installation script is to read it to be sure it doesn't badly interact with your system, and also in order to check if it is the last version of teamspeak 3 server)
 
 To use this procedure, make sure your system is up to date, clone this repository and execute run-install-as-root.sh

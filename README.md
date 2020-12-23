@@ -9,3 +9,5 @@ Before running this script, make sure you don't already have a custom schroot ca
 To use this procedure, make sure your system is up to date, clone this repository and execute run-install-as-root.sh
 
 Tested on Ubuntu server 20.04 and 20.10 and Rasperry Pi 4 model B (4 Go RAM)
+
+NB : I suggest you should have a reboot procedure in the root crontab to renew the services. Example : contab -e and 0 5 * * * reboot

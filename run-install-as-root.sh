@@ -47,8 +47,11 @@ rm -rf tmp
 #systemctl enable teamspeak3server.service
 
 #create teamspeak crontab to launch the server on startup
-cp configs/teamspeak_crontab /var/spool/cron/crontabs/teamspeak
-chown teamspeak:crontab /var/spool/cron/crontabs/teamspeak
+#cp configs/teamspeak_crontab /var/spool/cron/crontabs/teamspeak
+#chown teamspeak:crontab /var/spool/cron/crontabs/teamspeak
+# New crontab creation to avoid having to do crontab -e to install the new crontab file
+su - teamspeak -c "(crontab -l 2>/dev/null; echo '@reboot /opt/teamspeak/ts3.sh start') | crontab -"
+
 
 echo END Dowloading and setting up ts3 server
 

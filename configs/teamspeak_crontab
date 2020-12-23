@@ -1,2 +1,0 @@
-# to put in /var/sppol/cron/crontab/ i ubuntu
-@reboot /opt/teamspeak/ts3.sh start

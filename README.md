@@ -1,5 +1,5 @@
 # Install-ts3-server-ubuntu-server-ARM
-Install a teamsspeak3 server on ubuntu for ARM architecture with a bash script.
+Install a teamspeak3 server on ubuntu for ARM architecture with a bash script.
 Created from the procedure described here :
 https://www.raspberrypi.org/forums/viewtopic.php?t=275114
 

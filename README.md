@@ -11,3 +11,5 @@ To use this procedure, make sure your system is up to date, clone this repositor
 Tested on Ubuntu server 20.04 and 20.10 and Rasperry Pi 4 model B (4 Go RAM)
 
 NB : I suggest you should have a reboot procedure in the root crontab to renew the services. Example : contab -e and 0 5 * * * reboot
+
+NBB : You can look at https://github.com/TS3Tools/TS3UpdateScript for updates.
